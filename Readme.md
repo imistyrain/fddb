@@ -6,7 +6,7 @@
 
 ## evaluation
 
-[官网下载的代码](http://vis-www.cs.umass.edu/fddb/evaluation.tgz)仅支持OpenCV2.*，3.*后命名发生了变化，需要用cv::Scalar代替CV_RGB.
+[官网下载的代码](http://vis-www.cs.umass.edu/fddb/evaluation.tgz)仅支持OpenCV2.\*，3.\*后命名发生了变化，需要用cv::Scalar代替CV_RGB.
 
 ### Ubuntu & Mac
 
