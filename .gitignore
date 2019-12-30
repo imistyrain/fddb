@@ -10,3 +10,5 @@ Windows/ActivePerl_5.16.2.3010812913.msi
 *.o
 
 evaluation/evaluate
+
+*.zip
