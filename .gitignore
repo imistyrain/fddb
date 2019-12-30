@@ -12,3 +12,5 @@ Windows/ActivePerl_5.16.2.3010812913.msi
 evaluation/evaluate
 
 *.zip
+
+compareROC/
