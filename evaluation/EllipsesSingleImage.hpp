@@ -8,7 +8,7 @@
 #include "EllipseR.hpp"
 
 #ifndef __XCODE__
-#include <cv.h>
+#include <opencv2/opencv.hpp>
 #else
 #include  <OpenCV/OpenCV.h>
 #endif

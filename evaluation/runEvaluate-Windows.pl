@@ -4,7 +4,7 @@ use strict;
 
 #### VARIABLES TO EDIT ####
 # where gnuplot is
-my $GNUPLOT = "D:/Program Files/gnuplot/bin/gnuplot"; 
+my $GNUPLOT = "gnuplot"; 
 # where the binary is
 my $evaluateBin = "evaluation"; 
 # where the images are
@@ -12,7 +12,7 @@ my $imDir = "../originalPics/";
 # where the folds are
 my $fddbDir = "../FDDB-folds"; 
 # where the detections are
-my $detDir = $ARGV[0];#"MTCNN"; 
+my $detDir = "./";
 ###########################
 
 my $detFormat = 0; # 0: rectangle, 1: ellipse 2: pixels
@@ -48,7 +48,7 @@ my $gpFile = "createROC.p";
 # read all the folds into a single file for evaluation
 my $detFile = $detDir;
 #$detFile =~ s/\//_/g;
-$detFile = $detFile."/Dets.txt";
+$detFile = "Dets.txt";
 # if(-e $detFile){
   # system("del", $detFile);
 # }
@@ -77,11 +77,14 @@ $detFile = $detFile."/Dets.txt";
 system($evaluateBin, "-a", $annotFile, "-d", $detFile, "-f", $detFormat, "-i", $imDir, "-l", $listFile, "-r", $detDir);
 
 # plot the two ROC curves using GNUplot
-makeGNUplotFile($detDir."ContROC.txt", $gpFile, $detDir, $detDir."ContROC.png");
-#system("echo \"load '$gpFile'\" | $GNUPLOT");
+makeGNUplotFile($detDir."tempContROC.txt", $gpFile, $detDir, $detDir."ContROC.png");
+system("$GNUPLOT $gpFile");
 
-makeGNUplotFile($detDir."DiscROC.txt", $gpFile, $detDir, $detDir."DiscROC.png");
-#system("echo \"load '$gpFile'\" | $GNUPLOT");
+makeGNUplotFile($detDir."tempDiscROC.txt", $gpFile, $detDir, $detDir."DiscROC.png");
+system("$GNUPLOT $gpFile");
 
 # remove intermediate files
-#system("del", $annotFile, $listFile, $gpFile, $detFile);
+system("del",$annotFile);
+system("del",$listFile);
+system("del",$gpFile);
+system("del",$detFile);

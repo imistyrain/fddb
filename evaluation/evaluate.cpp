@@ -10,7 +10,7 @@
 #include <limits>
 
 #include "common.hpp"
-
+#include "mropencv.h"
 #ifdef __XCODE__
 #include <OpenCV/OpenCV.h>
 #endif
@@ -68,18 +68,10 @@ int main(int argc, char *argv[]){
   opterr = 0;
 #endif
 
-  // default values for different command-line arguments
-#ifdef _WIN32
-  string baseDir = "F:/scratch/Data/facesInTheWild/";
-  string listFile = "F:/scratch/Data/detectionResults/FDDB/imList.txt";
-  string detFile = "F:/scratch/Data/detectionResults/FDDB/MikolajczykDets.txt";
-  string annotFile = "F:/scratch/Data/detectionResults/FDDB/ellipseList.txt";
-#else
-  string baseDir = "/Users/vidit/scratch/Data/facesInTheWild/";
-  string listFile = "/Users/vidit/scratch/Data/detectionResults/FDDB/imList.txt";
-  string detFile = "/Users/vidit/scratch/Data/detectionResults/FDDB/MikolajczykDets.txt";
-  string annotFile = "/Users/vidit/scratch/Data/detectionResults/FDDB/ellipseList.txt";
-#endif
+  string baseDir = "../originalPics/";
+  string listFile = "imList.txt";
+  string detFile = "Dets.txt";
+  string annotFile = "ellipseList.txt";
 
   // directory containing the images
   string imDir = baseDir;

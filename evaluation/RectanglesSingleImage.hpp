@@ -6,7 +6,7 @@
 #include <fstream>
 
 #ifndef __XCODE__
-#include <cv.h>
+#include <opencv2/opencv.hpp>
 #endif
 #include "RegionsSingleImage.hpp"
 #include "RectangleR.hpp"

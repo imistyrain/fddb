@@ -5,7 +5,7 @@
 
 #include <vector>
 #ifndef __XCODE__
-#include <cv.h>
+#include <opencv2/opencv.hpp>
 #endif
 
 #include "Region.hpp"

@@ -7,7 +7,7 @@
 #include "common.hpp"
 
 #ifndef __XCODE__
-#include <highgui.h>
+#include <opencv/highgui.h>
 #endif
 
 #include <iostream>

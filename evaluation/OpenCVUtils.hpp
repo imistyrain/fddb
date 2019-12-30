@@ -8,8 +8,8 @@
 
 #include "common.hpp"
 #ifndef __XCODE__
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/opencv.hpp"
+#include "opencv2/highgui.hpp"
 #else
 #include <OpenCV/OpenCV.h>
 #endif

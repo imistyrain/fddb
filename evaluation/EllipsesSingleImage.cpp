@@ -5,8 +5,8 @@
 #include "EllipsesSingleImage.hpp"
 
 #ifndef __XCODE__
-#include <cv.h>
-#include <highgui.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
 #include "OpenCVUtils.hpp"
 #else
 #include <OpenCV/OpenCV.h>

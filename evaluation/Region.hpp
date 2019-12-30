@@ -8,7 +8,7 @@
 #ifdef __XCODE__
 #include <OpenCV/OpenCV.h>
 #else
-#include <cv.h>
+#include <opencv2/opencv.hpp>
 #endif
 
 /**

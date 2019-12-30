@@ -1,6 +1,6 @@
 #include "RectangleR.hpp"
 #ifndef __XCODE__
-#include <cv.h>
+#include <opencv2/opencv.hpp>
 #endif
 
 #include <vector>
