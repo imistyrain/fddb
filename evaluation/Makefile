@@ -11,7 +11,7 @@ BIN = evaluate
 all : $(BIN)
 
 evaluate: $(OBJS)
-	$(CC) $(LIBS) $(OBJS) -o $@
+	$(CC) $(OBJS) -o $@ $(LIBS)
 
 %.o:%.cpp
 	$(CC) $(CFLAGS) $(INCS) -c $< 
